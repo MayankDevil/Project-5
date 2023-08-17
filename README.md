@@ -34,7 +34,7 @@
 
 ### Home Page
 
-![HomPage](./data/gameHome.png "HomePage")
+![HomPage](data/gameHome.png "HomePage")
 
 ## About
 
