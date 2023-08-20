@@ -1,8 +1,8 @@
 /*
--
--
--
--
+- Project 5 ""
+- Develope by Mayank
+- All Right Rserved by Mayank
+- JavaScript : ./js/script.js
 */
 *
 {
@@ -79,3 +79,10 @@ body
 {
     font-size: 1.5rem;
 }
+@media screen and (max-width:992px)
+{
+    
+}
+/*
+    THE END ============================
+*/

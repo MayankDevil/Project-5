@@ -21,7 +21,6 @@
 </head>
 
 <body>
-    
     <!--
         ==================
         | main container |
@@ -32,26 +31,30 @@
 
             <div class="col" id="control">
 
-                <button class="btn" id="execute_btn"> PLAY </button>
+                <!-- ( status ) -->
+                <div> 
+                    ( Score { Plus <span id="plusPoint"></span> | Minus <span id="minusPoint"></span> } : <span id="score"></span> )                    
+                </div>
 
-                <button class="btn" id="reset_btn"> RESET </button>
-
+                <!-- ( selection number ) -->
                 <div id="number"></div>
-                
-                <div id="plusPoint"></div>
-                
-                <div id="minusPoint"></div>
-                
-                <div id="score"></div>
-                
+
+                <!-- ( time bar ) -->
                 <div id="timeBar"></div>
 
+                <!-- ( button group ) -->
+                <div>
+                    <button class="btn" id="execute_btn"> PLAY </button>
+                    
+                    <button class="btn" id="reset_btn"> RESET </button>
+                </div>
+                
             </div>
 
-            <div class="col" id="num">
-
-
-            </div>
+            <!--
+                [ num ] -----
+            -->
+            <div class="col" id="num"></div>
         
         </div>
     </div>
