@@ -6,6 +6,8 @@
 */
 try
 {
+    let main = document.getElementById('main')
+
     let execute_btn = document.getElementById('execute_btn')
     
     let reset_btn = document.getElementById('reset_btn')
@@ -15,9 +17,11 @@ try
     let num = document.getElementById('num')
     
     var numBox = document.getElementsByClassName('numBox')
-
+    
     // -------------------------------------------------------------
     
+    var number_of_box = 100
+
     var random_number = getRandomNum()
     
     let counter = null;
@@ -41,7 +45,10 @@ try
     setMatrix()
     
     number.innerHTML = random_number
-
+    /*
+        { onload set number of box }-------------------------------------
+    */
+    window.onload = () => (window.innerWidth > 700)? number_of_box = 100 : main.innerHTML = `<div class='number'> SORRY REQUIRE MORE THAN 700PX SCREEN WIDTH DEVICE </div>`
     /*
         -----------------------------------------------------------------
         [ function return ] get random number 
@@ -87,22 +94,27 @@ try
     function numSelect(index)
     {
         numBox[index].onclick = () => {
-
-            if (random_number == numBox[index].innerHTML)
+            
+            if (btn_status == false)
             {
-                plus ++
-                
-                plusPoint(plus)
-                
-                numBox[index].style.background = '#a3cfbb'
-            }
-            else
-            {
-                minus ++
-                
-                minusPoint(minus)
-                
-                numBox[index].style.background = '#f1aeb5'
+                if (random_number == numBox[index].innerHTML)
+                {
+                    plus ++
+                    
+                    plusPoint(plus)
+                    
+                    numBox[index].style.background = '#a3cfbb'
+                    
+                    setMatrix()
+                }
+                else
+                {
+                    minus ++
+                    
+                    minusPoint(minus)
+                    
+                    numBox[index].style.background = '#f1aeb5'
+                }
             }
             score(plus,minus)
         }
@@ -116,12 +128,41 @@ try
     {
         num.innerHTML = ""
 
-        for (let i = 0; i < 100; i++)
+        for (let i = 0; i < number_of_box; i++)
         {
             num.insertAdjacentHTML("beforeend",`<div class='numBox'>${ getRandomNum() }</div>`)
             
             numSelect(i)
         }
+    }
+    /*
+        ----------------------------------------------------------
+        [ counter function ] count reverse time
+        ----------------------------------------------------------
+    */
+    function setTimeLine(yourTime)
+    {
+        counter = setInterval(function()
+        {
+            if (yourTime == 0)
+            {
+                execute_btn.innerHTML = `PLAY`
+            
+                execute_btn.classList.remove('stop_btn')
+
+                clearInterval(counter)
+
+                btn_status = true
+
+                num.innerHTML = ``
+            }
+            else
+            {            
+                yourTime -= 1
+                
+                setTimer(yourTime)
+            }
+        }, 1000);
     }
     /*
         ------------------------------------------------------------------
@@ -133,33 +174,13 @@ try
     
         if (btn_status)
         {
-
             execute_btn.innerHTML = `STOP`
 
             execute_btn.classList.add('stop_btn')
 
-            /*
-                ----------------------------------------------------------
-                [ counter function ] count reverse time
-                ----------------------------------------------------------
-            */ 
-                counter = setInterval(function()
-                {
-                    if (yourTime != 0)
-                    {            
-                        yourTime -= 1
-                        
-                        setTimer(yourTime)
-                    }
-                    else
-                    {
-                        clearInterval(counter)
+            setTimeLine(yourTime)
 
-                        num.innerHTML = `<div class='number'> Time Over Your Final Score is ${n1-n2} </div>`
-                    }
-                }, 1000);
-            
-            btn_status = false
+            btn_status = false   
         }
         else
         {
@@ -174,36 +195,14 @@ try
     }
     /*
         ----------------------------------------------------------------
-        | function on click reset button | reload the webpage
+        | function on click reset button | reload the webpage   
         ----------------------------------------------------------------
     */ 
     reset_btn.onclick = () => {
         
         if (confirm("You are really want to reset "))
-        {
-            counter = null;
-            
-            btn_status = true
-            
-            plus = 0
-            
-            minus = 0
-
-            yourTime = 60
-            
-            plusPoint(plus)
-            
-            minusPoint(minus)
-            
-            score(plus, minus)
-
-            timerBar(60)
-
-            setMatrix()
-            
-            number.innerHTML = random_number
-
-            // window.location.reload()
+        {   
+            window.location.reload()
         }
     }
 }
