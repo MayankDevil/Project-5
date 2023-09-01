@@ -10,7 +10,7 @@
 
 - Status : ACTIVE
 
-- Responsive : Ture
+- Responsive : True
 
 - TecStack : { HTML | CSS | JavaScript }
 
