@@ -1,100 +1,132 @@
 /*
-- Project 5 ""
-- Develope by Mayank
-- All Right Rserved by Mayank
-- JavaScript : ./js/script.js
+-   Project-5 : "DesktopGame"
+-   https://github.com/MayankDevil
+-   Designed | Developed by Mayank
+-   CSS : ./css/style.css
 */
+
 *
 {
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    text-decoration: none;
-    color:#c7ecee;
-    border:none;
-    outline: none;
+	user-select: none;
+	margin:0;
+	padding:0;
+	color:var(--black);
+	text-decoration: none;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji";
+	font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	border:none;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
+
+:root
+{
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+/*
+	main css ---------------------------
+*/
+
 body
 {
     width: 100%;
-    height: 100vh;
-    background: rgba(5, 75, 100, 0.6) url("../data/bg.jpg") no-repeat;
-    background-size: cover;
+    height: 90vh;
+    background: rgba(5, 75, 100, 0.6) url("../data/bg.jpg") no-repeat fixed;
+    background-size: 100% 100%;
     background-blend-mode: overlay;
 }
-.container
+
+#main
 {
-    min-width: 500px;
-    height: 100vh;
-    margin: auto;
+    position: relative;
+    z-index:0;
+	max-width: 1000px;
+	margin: 0 auto;
 }
-.row
+
+#header .display-1
 {
-    display: grid;
-    grid-template-rows: 1fr 9fr;
+    margin: 5rem auto;
+    font-size: 5rem;
+    font-weight: light;
+    color:var(--dark);
+}
+
+p
+{
+    margin: 5rem auto;
     padding: 1rem;
+    font-size: 1em;
+    color:var(--gray-dark);
+    background: rgb(255,255,255,0.7);
+    border-radius: 0 5rem 5rem 0;
 }
-#control
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color:#202020;
-}
-#num
-{
-    display: grid;
-    grid-gap:0.5rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    height: 100%;
-}
-.numBox
-{
-    display: inline-block;
-    padding: 1rem;
-    line-height: 2rem;
-    text-align: center;
-    color:#dcdde1;
-    border: 1px solid rgba(10,10,10,0.1);
-}
-.numBox:hover
-{
-    color:#000;
-    background: #ffbe76;
-}
+
 .btn
 {
-    padding: 1rem 2rem;
-    color:#fff;
-    background: #0d6efd;
-    border-radius: 10px;
+    display: inline-block;
+    padding: 5px 20px;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: var(--light);
+    background: var(--dark);
 }
 .btn:hover
 {
-    opacity: 0.6;
+    background:var(--primary);
+    box-shadow: 2px 2px 5px var(--dark);
 }
-.stop_btn
+
+#footer
 {
-    background: #ffc107 ;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    margin-left: -1rem;
+    width: 60%;
+    text-align: center;
+    background: var(--orange);
+    transform: skew(10deg);
 }
-#reset_btn
+#footer h6
 {
-    background:#198754;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--dark);
 }
-#number,
-.number
+#footer h6 a
 {
-    font-size: 1.5rem;
+    display: inline-block;
+    font-size: large;
+    font-weight: normal;
+    color:var(--light);
 }
-@media screen and (max-width:700px)
+#footer h6 a:hover
 {
-    #main
-    {
-        display: grid;
-        text-align: center;
-        place-content: center;
-    }
+    font-weight: bold;
 }
-/*
-    THE END ============================
-*/

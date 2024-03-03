@@ -1,0 +1,94 @@
+/*
+-   Project-5 : "DesktopGame"
+-   https://github.com/MayankDevil
+-   Designed | Developed by Mayank
+-   CSS : ./css/find_num.css
+*/
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-decoration: none;
+    border:none;
+    outline: none;
+}
+
+.container
+{
+    min-width: 500px;
+    height: 100vh;
+    margin: auto;
+}
+.row
+{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    padding: 1rem;
+}
+#control
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:#202020;
+}
+#num
+{
+    display: grid;
+    grid-gap:0.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 100%;
+}
+.numBox
+{
+    display: inline-block;
+    padding: 1rem;
+    line-height: 2rem;
+    text-align: center;
+    color:#6c757d;
+    border: 1px solid rgba(10,10,10,0.1);
+}
+.numBox:hover
+{
+    color: #fd7e14;
+    font-weight: bold;
+    font-size: large;
+    border-color:transparent;
+}
+.btn
+{
+    padding: 1rem 2rem;
+    color:#fff;
+    background: #0d6efd;
+    border-radius: 10px;
+}
+.btn:hover
+{
+    opacity: 0.6;
+}
+.stop_btn
+{
+    background: #ffc107 ;
+}
+#reset_btn
+{
+    background:#198754;
+}
+#number,
+.number
+{
+    font-size: 1.5rem;
+}
+@media screen and (max-width:700px)
+{
+    #main
+    {
+        display: grid;
+        text-align: center;
+        place-content: center;
+    }
+}
+/*
+    THE END ============================
+*/
