@@ -4,19 +4,19 @@
 
 - Description : "A web game for web user that like to play simple games"
 
-- Version : 5.2
+- Version : main
 
-- Update : 15-08-2023
+- Update : 03-03-2024
 
-- Status : ACTIVE
+- Status : REST
 
 - Responsive : True
 
-- TecStack : { HTML | CSS | JavaScript }
+- TechStack : { HTML | CSS | JavaScript }
 
-- Thanks : { VSCode | GitHub }
+- Thanks : { GitHub | VSCodium | GIMP MayankDevil }
 
-- Work : Self
+- Collabrate : { Self }
 
 - Design : { Mayank }
 
@@ -39,3 +39,29 @@
 ## About
 
 _click play button and select random number that given_
+
+
+
+
+#### Project Look & Feel
+
+![NETWORK_ERROR](./data/website.png)
+
+#### Not Responsive
+
+_Our immersive desktop gaming platform, crafted with ethical precision, prioritizes an impressive gaming experience; please note, it is optimized for desktop play and may not be responsive on mobile or small tablets due to the intricacies of the game design._
+
+#### Theme
+
+_"Experience an inclusive and ethically designed desktop game project that refrains from specifying a color scheme to cater to diverse gaming sections."_
+
+
+### Warning
+
+** normal copyright **
+
+__" Please refrain from unauthorized coping or downloading of content, as such actions are subject to legal consequences and potential charges.We encourage respectful and responsible use of the resouces prvided for learning purpose."__
+
+
+[![twitter](https://img.shields.io/badge/MayankDevil-1DA1F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MayankDevil/)
+
