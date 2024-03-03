@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--
--
--
--
--
+-   Project-5 : "DesktopGame"
+-   https://github.com/MayankDevil
+-   Designed | Developed by Mayank
+-   HTML : ./index.html
 -->
 <html lang="en">
 
@@ -11,62 +11,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MayankDevil</title>
+    <title>Document</title>
     <!--
-        =========
+        ---------
         | style |
-        =========
+        ---------
     -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
     <!--
-        ==================
+        ------------------
         | main container |
-        ==================
+        ------------------
     -->
-    <div class="container" id="main">
-        <div class="row">
+    <main id="main">
+        <!--
+            ------------------
+            [ header section ]
+            ------------------
+        -->
+        <header id="header">
 
-            <div class="col" id="control">
+            <div class="display-1"> _desktop_ Game </div>
 
-                <!-- ( status ) -->
-                <div> 
-                    ( Score { Plus <span id="plusPoint"></span> | Minus <span id="minusPoint"></span> } : <span id="score"></span> )                    
-                </div>
+            <p> Get ready for a super easy and fun time with our desktop game! It's a simple game that's perfect for anyone who just wants to have a good time without any complicated stuff. </p>
 
-                <!-- ( selection number ) -->
-                <div id="number"></div>
+            <a href="./find_num.html" class="btn"> find number </a>
 
-                <!-- ( time bar ) -->
-                <div id="timeBar"></div>
+            <a href="./rock_paper_scissors.html" class="btn"> rock paper scissors </a>
+            
+        </header>
+        <!--
+            ------------------
+            [ footer section ]
+            ------------------
+        -->
+        <footer id="footer">
+            
+            <h6> Developed | Designed by <a href="https://github.com/MayankDevil/"> MayankDevil </a> </h6>
 
-                <!-- ( button group ) -->
-                <div>
-                    <button class="btn" id="execute_btn"> PLAY </button>
-                    
-                    <button class="btn" id="reset_btn"> RESET </button>
-                </div>
-                
-            </div>
+        </footer>
 
-            <!--
-                [ num ] -----
-            -->
-            <div class="col" id="num"></div>
-        
-        </div>
-    </div>
-    
-    <audio autoplay>
-        <sourc src="./data/song.mp3" type="audio/mp3">
-    </auido>
-
+    </main>
     <!--
-        ==========
+        ----------
         | script |
-        ==========
+        ----------
     -->
     <script src="js/script.js"></script>
 
