@@ -32,20 +32,9 @@
 
 ---
 
-### Home Page
-
-![HomPage](./data/gameHome.png "HomePage")
-
-## About
-
-_click play button and select random number that given_
-
-
-
-
 #### Project Look & Feel
 
-![NETWORK_ERROR](./data/website.png)
+![NETWORK_ERROR](./data/gameHome.png)
 
 #### Not Responsive
 
