@@ -1,8 +1,8 @@
 # Project 5
 
-- Name : "Find Rank"
+- Name : "DesktopGame"
 
-- Description : "A web game for web user that like to play simple games"
+- Description : "Simple online game plathform for desktop web browser free"
 
 - Version : main
 
